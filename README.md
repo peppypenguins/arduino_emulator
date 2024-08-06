@@ -1,2 +1,4 @@
-# arduino_emulator
-embedded emulator for testing the BLE board
+# Arduino Embedded Emulator Program
+This program allows you to do various test for the SureSense BLE board easier. Simply start the program and it will prompt the user to select which test they want to run. After selecting your test it should automatically begin.
+
+If you wish to add a test to this code I recommend copying the template I have set for various test. Therefore you should copy the test .cpp and .hpp files, such as the DT145.hpp and DT145.cpp files and rename all references to that name. Then you must include your .hpp file in the TestRoot.hpp file. then you must alter the Enum in Structs.hpp to hold your new test name. Then you must change the function in Structs.cpp to include the ability to select your test, it is also recommended here to add a println instruction to prompt the user that your included test is available. Finally in TestRoot.cpp you must add your test to the function that allocates test objects. Then you should be ready to go.
